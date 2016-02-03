@@ -33,16 +33,18 @@ def collatz_eval (i, j) :
     max_c = 1
     s = min(i,j)
     e = max(i,j)
-    
+
     while s != e:
         count = 1
         temp = s
-        while temp != 1:
+        while temp > 1:
             if temp%2 == 0:
                 temp = temp/2
+                count = count + 1
             else:
-                temp = temp*3 + 1
-            count = count + 1
+                temp = math.floor(temp + temp/2 + 1)
+                count = count + 2
+
 
         if count > max_c:
             max_c = count
