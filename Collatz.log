@@ -1,0 +1,35 @@
+commit 25274317e83af313a3f98cdf66707bddffba61a3
+Author: willhuang93 <willhuang93@yahoo.com>
+Date:   Wed Feb 3 02:22:51 2016 -0600
+
+    spheretest.py finished
+
+commit 7c53c60aad3b6056bce2968b220b6b4799d7a2fb
+Author: willhuang93 <willhuang93@yahoo.com>
+Date:   Wed Feb 3 02:22:33 2016 -0600
+
+    2nd Collatz commit, finished operational optimization, need to implement cache next
+
+commit 14151c71ba7e7928fc8df3fcf00be1d770315774
+Author: willhuang93 <willhuang93@yahoo.com>
+Date:   Wed Feb 3 02:21:47 2016 -0600
+
+    basic collatz functionality finished
+
+commit d2f32328cdc0f76af6b4d894d80fe03579abb65d
+Author: willhuang93 <willhuang93@yahoo.com>
+Date:   Tue Feb 2 19:42:52 2016 -0600
+
+    edited makefile for Travis CI
+
+commit 3d494bb8d9c5583885576630c3d3ae458b22dc31
+Author: willhuang93 <willhuang93@yahoo.com>
+Date:   Sun Jan 31 16:26:15 2016 -0600
+
+    Initial commit for step 15
+
+commit c13a56a9de39c4c1bc513e0d0d6e940bc72a78e1
+Author: willhuang93 <negative134@gmail.com>
+Date:   Sun Jan 31 13:06:44 2016 -0600
+
+    Initial commit

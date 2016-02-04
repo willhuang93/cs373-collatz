@@ -50,34 +50,31 @@ def collatz_eval (i, j) :
     # print("S: ", s, "\tE: ", e)
     
     while s <= e:
-        if s in cache:
-            count = cache[s]
-        else:
-            count = 1
-            temp = s
+        count = 1
+        temp = s
 
-            # print("CALCULATING:\t\t", temp)
-            while temp > 1:
-                if temp in cache:
-                    count = count + cache[temp] - 1
-                    # print(temp, " is in cache, with value: ", cache[temp], "\tCOUNT: ", count)
-                    temp = 1
+        # print("CALCULATING:\t\t", temp)
+        while temp > 1:
+            if temp in cache:
+                count = count + cache[temp] - 1
+                # print(temp, " is in cache, with value: ", cache[temp], "\tCOUNT: ", count)
+                temp = 1
 
+            else:
+                # print(temp, " is not in cache with count: ", count)
+                if temp % 2 == 0:
+                    temp = temp/2
+                    count = count + 1
                 else:
-                    # print(temp, " is not in cache with count: ", count)
-                    if temp % 2 == 0:
-                        temp = temp/2
-                        count = count + 1
-                    else:
-                        temp = math.floor(temp + temp/2 + 1)
-                        count = count + 2
-                    # print("checking: ", temp, " next with count: ", count)
+                    temp = math.floor(temp + temp/2 + 1)
+                    count = count + 2
+                # print("checking: ", temp, " next with count: ", count)
 
-            cache[s] = count
-            # print("cached\t", s," : ",count)
-
+        cache[s] = count
+        # print("cached\t", s," : ",count)
         if count > max_c:
             max_c = count
+        # print("")
         s = s + 1
 
     assert (max_c > 0)
@@ -107,6 +104,7 @@ def collatz_solve (r, w) :
     w a writer
     """
     for s in r :
-        i, j = collatz_read(s)
-        v    = collatz_eval(i, j)
-        collatz_print(w, i, j, v)
+        if s.strip():
+            i, j = collatz_read(s)
+            v    = collatz_eval(i, j)
+            collatz_print(w, i, j, v)

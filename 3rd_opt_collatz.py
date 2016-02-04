@@ -5,7 +5,7 @@
 # Copyright (C) 2016
 # Glenn P. Downing
 # ---------------------------
-
+import math
 # ------------
 # collatz_read
 # ------------
@@ -33,20 +33,35 @@ def collatz_eval (i, j) :
     max_c = 1
     s = min(i,j)
     e = max(i,j)
+
+    cache = dict()
     
-    while s != e:
+    while s <= e:
         count = 1
         temp = s
-        while temp != 1:
-            if temp%2 == 0:
-                temp = temp/2
-            else:
-                temp = temp*3 + 1
-            count = count + 1
 
+        # print("CALCULATING:\t\t", temp)
+        while temp > 1:
+            if temp in cache:
+                count = count + cache[temp] - 1
+                # print(temp, " is in cache, with value: ", cache[temp], "\tCOUNT: ", count)
+                temp = 1
+
+            else:
+                # print(temp, " is not in cache with count: ", count)
+                if temp%2 == 0:
+                    temp = temp/2
+                    count = count + 1
+                else:
+                    temp = math.floor(temp + temp/2 + 1)
+                    count = count + 2
+                # print("checking: ", temp, " next with count: ", count)
+
+        cache[s] = count
+        # print("cached\t", s," : ",count)
         if count > max_c:
             max_c = count
-
+        # print("")
         s = s + 1
     return max_c
 
