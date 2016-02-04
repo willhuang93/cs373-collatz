@@ -112,7 +112,6 @@ def collatz_solve (r, w) :
     Also modified for Sphere's bad input of a line of spaces
     """
     for s in r :
-    	if s.strip():
-	        i, j = collatz_read(s)
-	        v    = collatz_eval(i, j)
-	        collatz_print(w, i, j, v)
+        i, j = collatz_read(s)
+        v    = collatz_eval(i, j)
+        collatz_print(w, i, j, v)
