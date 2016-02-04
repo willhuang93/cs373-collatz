@@ -31,6 +31,10 @@
 <tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><dl><dt><a name="-collatz_eval"><strong>collatz_eval</strong></a>(i, j)</dt><dd><tt>i&nbsp;the&nbsp;beginning&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
 j&nbsp;the&nbsp;end&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of&nbsp;the&nbsp;range,&nbsp;inclusive<br>
+checks&nbsp;min&nbsp;and&nbsp;max&nbsp;between&nbsp;i&nbsp;and&nbsp;j&nbsp;to&nbsp;determine&nbsp;start&nbsp;and&nbsp;end<br>
+uses&nbsp;(END&nbsp;/&nbsp;2&nbsp;+&nbsp;1)&nbsp;&lt;&nbsp;START&nbsp;optimization&nbsp;to&nbsp;eliminate&nbsp;half&nbsp;of&nbsp;cases&nbsp;when&nbsp;conditions&nbsp;are&nbsp;met<br>
+uses&nbsp;global&nbsp;cache,&nbsp;caches&nbsp;every&nbsp;time&nbsp;a&nbsp;new&nbsp;number's&nbsp;cycle&nbsp;length&nbsp;is&nbsp;determined<br>
+uses&nbsp;(T&nbsp;+&nbsp;T/2&nbsp;+&nbsp;1)&nbsp;to&nbsp;reduce&nbsp;the&nbsp;number&nbsp;of&nbsp;operations&nbsp;to&nbsp;determine&nbsp;cycle&nbsp;length<br>
 return&nbsp;the&nbsp;max&nbsp;cycle&nbsp;length&nbsp;of&nbsp;the&nbsp;range&nbsp;[i,&nbsp;j]</tt></dd></dl>
  <dl><dt><a name="-collatz_print"><strong>collatz_print</strong></a>(w, i, j, v)</dt><dd><tt>print&nbsp;three&nbsp;ints<br>
 w&nbsp;a&nbsp;writer<br>
@@ -41,7 +45,8 @@ v&nbsp;the&nbsp;max&nbsp;cycle&nbsp;length</tt></dd></dl>
 s&nbsp;a&nbsp;string<br>
 return&nbsp;a&nbsp;list&nbsp;of&nbsp;two&nbsp;ints,&nbsp;representing&nbsp;the&nbsp;beginning&nbsp;and&nbsp;end&nbsp;of&nbsp;a&nbsp;range,&nbsp;[i,&nbsp;j]</tt></dd></dl>
  <dl><dt><a name="-collatz_solve"><strong>collatz_solve</strong></a>(r, w)</dt><dd><tt>r&nbsp;a&nbsp;reader<br>
-w&nbsp;a&nbsp;writer</tt></dd></dl>
+w&nbsp;a&nbsp;writer<br>
+Also&nbsp;modified&nbsp;for&nbsp;Sphere's&nbsp;bad&nbsp;input&nbsp;of&nbsp;a&nbsp;line&nbsp;of&nbsp;spaces</tt></dd></dl>
 </td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#55aa55">
