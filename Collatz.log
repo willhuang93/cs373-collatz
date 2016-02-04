@@ -1,3 +1,15 @@
+commit eeba72bf3d189ab5d2c24c7abc6543ba23d57de5
+Author: Ouyangzheng Huang <ouyang16@cs.utexas.edu>
+Date:   Thu Feb 4 16:08:00 2016 -0600
+
+    added more unit tests to TestCollatz.py
+
+commit 38dbdbbdc98f927583a3411437238f9fbdbe6d56
+Author: Ouyangzheng Huang <ouyang16@cs.utexas.edu>
+Date:   Thu Feb 4 15:58:54 2016 -0600
+
+    updated git log
+
 commit c7e3de1c6869de676c1b7eb655ae877ef8c3fa0d
 Author: Ouyangzheng Huang <ouyang16@cs.utexas.edu>
 Date:   Thu Feb 4 15:47:02 2016 -0600
