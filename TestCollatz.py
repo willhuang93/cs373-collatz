@@ -84,10 +84,20 @@ class TestCollatz (TestCase) :
     # print
     # -----
 
-    def test_print (self) :
+    def test_print_1 (self) :
         w = StringIO()
         collatz_print(w, 1, 10, 20)
         self.assertEqual(w.getvalue(), "1 10 20\n")
+
+    def test_print_2 (self) :
+        w = StringIO()
+        collatz_print(w, 20, 10, 1)
+        self.assertEqual(w.getvalue(), "20 10 1\n")
+
+    def test_print_3 (self) :
+        w = StringIO()
+        collatz_print(w, 1, 1, 1)
+        self.assertEqual(w.getvalue(), "1 1 1\n")
 
     # -----
     # solve
