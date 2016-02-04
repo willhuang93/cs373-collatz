@@ -1,3 +1,21 @@
+commit c7e3de1c6869de676c1b7eb655ae877ef8c3fa0d
+Author: Ouyangzheng Huang <ouyang16@cs.utexas.edu>
+Date:   Thu Feb 4 15:47:02 2016 -0600
+
+    Added inline comments to Collatz.py to describe the eval function, also updated Collatz.html
+
+commit 0121fdc41e8dba3796abe0bd1efb0b39bdae2b73
+Author: Ouyangzheng Huang <ouyang16@cs.utexas.edu>
+Date:   Thu Feb 4 15:18:48 2016 -0600
+
+    removed collatz test to see if travis CI will work
+
+commit 307453caa12423acae1e8a34c4981c177dbd0f8c
+Author: Ouyangzheng Huang <ouyang16@cs.utexas.edu>
+Date:   Thu Feb 4 15:09:13 2016 -0600
+
+    final version
+
 commit 25274317e83af313a3f98cdf66707bddffba61a3
 Author: willhuang93 <willhuang93@yahoo.com>
 Date:   Wed Feb 3 02:22:51 2016 -0600
